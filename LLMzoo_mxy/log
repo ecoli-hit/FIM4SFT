@@ -1,0 +1,39 @@
+W&B offline. Running your script from this directory will only write metadata locally. Use wandb disabled to completely turn off W&B.
+[2023-12-26 23:31:14,493] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-12-26 23:31:16,880] [WARNING] [runner.py:202:fetch_hostfile] Unable to find hostfile, will proceed with training with local resources only.
+[2023-12-26 23:31:16,880] [INFO] [runner.py:571:main] cmd = /data/mxy/miniconda3/envs/zoo/bin/python -u -m deepspeed.launcher.launch --world_info=eyJsb2NhbGhvc3QiOiBbMl19 --master_addr=127.0.0.1 --master_port=9920 --enable_each_rank_log=None train_random.py --deepspeed /data/mxy/Finstruction/LLMzoo_mxy/deepspeed.conf --model_name_or_path /data/mxy/models/llama2-7b-hf --model_max_length 2048 --data_path /data/mxy/Finstruction/data/code/commitpackft/data/c++/train.jsonl --output_dir /data/mxy/Finstruction/output/code/c++_test --bf16 True --num_train_epochs 10 --per_device_train_batch_size 8 --per_device_eval_batch_size 4 --gradient_accumulation_steps 1 --save_strategy steps --evaluation_strategy no --save_total_limit 1 --learning_rate 2e-5 --weight_decay 0. --warmup_ratio 0.03 --lr_scheduler_type cosine --logging_steps 1 --tf32 True --gradient_checkpointing True --save_steps 10
+[2023-12-26 23:31:18,949] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-12-26 23:31:20,646] [INFO] [launch.py:145:main] WORLD INFO DICT: {'localhost': [2]}
+[2023-12-26 23:31:20,646] [INFO] [launch.py:151:main] nnodes=1, num_local_procs=1, node_rank=0
+[2023-12-26 23:31:20,646] [INFO] [launch.py:162:main] global_rank_mapping=defaultdict(<class 'list'>, {'localhost': [0]})
+[2023-12-26 23:31:20,646] [INFO] [launch.py:163:main] dist_world_size=1
+[2023-12-26 23:31:20,646] [INFO] [launch.py:165:main] Setting CUDA_VISIBLE_DEVICES=2
+[2023-12-26 23:31:23,053] [INFO] [real_accelerator.py:161:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2023-12-26 23:31:25,053] [INFO] [comm.py:637:init_distributed] cdb=None
+[2023-12-26 23:31:25,053] [INFO] [comm.py:668:init_distributed] Initializing TorchBackend in DeepSpeed with backend nccl
+Dump Fisher False
+[2023-12-26 23:31:53,196] [INFO] [partition_parameters.py:348:__exit__] finished initializing model - num_params = 291, num_elems = 6.74B
+load data from /data/mxy/Finstruction/data/code/commitpackft/data/c++/train.jsonl
+ninja: no work to do.
+Time to load cpu_adam op: 3.2141830921173096 seconds
+Parameter Offload: Total persistent parameters: 266240 in 65 params
+{'loss': 0.8879, 'learning_rate': 1.1235955056179776e-07, 'epoch': 0.0}
+{'loss': 0.8541, 'learning_rate': 2.247191011235955e-07, 'epoch': 0.0}
+{'loss': 0.7505, 'learning_rate': 3.3707865168539325e-07, 'epoch': 0.01}
+{'loss': 0.8111, 'learning_rate': 4.49438202247191e-07, 'epoch': 0.01}
+{'loss': 0.8381, 'learning_rate': 5.617977528089888e-07, 'epoch': 0.01}
+{'loss': 0.6277, 'learning_rate': 6.741573033707865e-07, 'epoch': 0.01}
+{'loss': 0.8753, 'learning_rate': 7.865168539325843e-07, 'epoch': 0.01}
+{'loss': 0.7728, 'learning_rate': 8.98876404494382e-07, 'epoch': 0.01}
+{'loss': 0.8982, 'learning_rate': 1.01123595505618e-06, 'epoch': 0.02}
+{'loss': 0.8177, 'learning_rate': 1.1235955056179777e-06, 'epoch': 0.02}
+{'loss': 0.6703, 'learning_rate': 1.2359550561797752e-06, 'epoch': 0.02}
+{'loss': 0.8578, 'learning_rate': 1.348314606741573e-06, 'epoch': 0.02}
+{'loss': 0.8851, 'learning_rate': 1.4606741573033708e-06, 'epoch': 0.02}
+{'loss': 0.7252, 'learning_rate': 1.5730337078651686e-06, 'epoch': 0.02}
+{'loss': 0.9652, 'learning_rate': 1.6853932584269663e-06, 'epoch': 0.03}
+{'loss': 0.7377, 'learning_rate': 1.797752808988764e-06, 'epoch': 0.03}
+{'loss': 0.5849, 'learning_rate': 1.910112359550562e-06, 'epoch': 0.03}
+{'loss': 0.7591, 'learning_rate': 2.02247191011236e-06, 'epoch': 0.03}
+{'loss': 0.6495, 'learning_rate': 2.1348314606741574e-06, 'epoch': 0.03}
+{'loss': 0.5668, 'learning_rate': 2.2471910112359554e-06, 'epoch': 0.03}
